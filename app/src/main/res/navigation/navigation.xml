@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/titleFragment2">
+    app:startDestination="@id/titleFragment">
     <fragment
-        android:id="@+id/titleFragment2"
+        android:id="@+id/titleFragment"
         android:name="com.example.android.navigation.TitleFragment"
-        android:label="fragment_title"
-        tools:layout="@layout/fragment_title" >
+        android:label="@string/android_trivia"
+        tools:layout="@layout/fragment_title">
         <action
             android:id="@+id/action_titleFragment2_to_gameFragment"
             app:destination="@id/gameFragment" />
@@ -37,7 +37,7 @@
         <action
             android:id="@+id/action_gameWonFragment_to_gameFragment"
             app:destination="@id/gameFragment"
-            app:popUpTo="@id/titleFragment2" />
+            app:popUpTo="@id/titleFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameOverFragment2"
@@ -47,6 +47,11 @@
         <action
             android:id="@+id/action_gameOverFragment2_to_gameFragment"
             app:destination="@id/gameFragment"
-            app:popUpTo="@id/titleFragment2" />
+            app:popUpTo="@id/titleFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.android.navigation.AboutFragment"
+        android:label="@string/title_about_trivia"
+        tools:layout="@layout/fragment_about" />
 </navigation>

@@ -10,7 +10,7 @@
         android:label="@string/android_trivia"
         tools:layout="@layout/fragment_title">
         <action
-            android:id="@+id/action_titleFragment2_to_gameFragment"
+            android:id="@+id/action_titleFragment_to_gameFragment"
             app:destination="@id/gameFragment" />
     </fragment>
     <fragment
@@ -20,7 +20,7 @@
         tools:layout="@layout/fragment_game" >
         <action
             android:id="@+id/action_gameFragment_to_gameOverFragment2"
-            app:destination="@id/gameOverFragment2"
+            app:destination="@id/gameOverFragment"
             app:popUpTo="@id/gameFragment"
             app:popUpToInclusive="true" />
         <action
@@ -38,14 +38,20 @@
             android:id="@+id/action_gameWonFragment_to_gameFragment"
             app:destination="@id/gameFragment"
             app:popUpTo="@id/titleFragment" />
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
     </fragment>
     <fragment
-        android:id="@+id/gameOverFragment2"
+        android:id="@+id/gameOverFragment"
         android:name="com.example.android.navigation.GameOverFragment"
         android:label="fragment_game_over"
         tools:layout="@layout/fragment_game_over" >
         <action
-            android:id="@+id/action_gameOverFragment2_to_gameFragment"
+            android:id="@+id/action_gameOverFragment_to_gameFragment"
             app:destination="@id/gameFragment"
             app:popUpTo="@id/titleFragment" />
     </fragment>
